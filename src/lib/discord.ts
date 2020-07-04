@@ -12,7 +12,7 @@ interface discordArgs {
 }
 
 export default async({ weather, news, date, url }: discordArgs) => {
-  const today = new Date().toLocaleDateString().replace(/\. /g, '-').replace('.', '');
+  const today = new Date(1489199400000).toLocaleDateString().replace(/\. /g, '-').replace('.', '');
 
   let message: any = {
     username: '편지봇',
