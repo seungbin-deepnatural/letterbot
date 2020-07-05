@@ -12,8 +12,7 @@ interface slackArgs {
 }
 
 export default async({ weather, news, date, url }: slackArgs) => {
-  const todayDate = new Date()
-  const today = new Date(todayDate -540 * 60 * 1000).toLocaleDateString().replace(/\. /g, '-').replace('.', '');
+  const today = new Date(Date() -540 * 60 * 1000).toLocaleDateString().replace(/\. /g, '-').replace('.', '');
 
   let message: any = {
     attachments: [],
